@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+/* SETUP */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', cursive;
+  user-select: none;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  font-size: 16px;
+}
+
+img {
+  border: 3px solid black; /* Толщина рамки 3 пикселя, красный цвет */
+  border-radius: 5px; /* Закругление углов 5 пикселей */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+  max-width: 100%; /* Максимальная ширина изображения 100% */
+}
+
+.moving-text-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background-color: #FFC107;
+}
+
+.moving-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  animation: move-text 50s linear infinite;
+}
+
+/* END SETUP */
+
+/* HOVER */
+a:hover {
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+.product:hover .product-image:hover {
+  transform: scale(1.1);
+}
+
+.foot a:hover {
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+/* END HOVER */
+
+/* MAIN BANNER */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('img/bgAKTUALtop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main h3 {
+  margin-top: 250px;
+}
+
+.main p {
+  margin-bottom: 250px;
+}
+/* END MAIN BANNER */
+
+/* PRODUCTS BANNER */
+
+.columns {
+  background-image: url('img/bgTOWaktual.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+}
+
+.product {
+  width: 300px;
+  height: 400px;
+  margin: 50px 30px 50px 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.hor-col {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  transition: all 0.2s ease-in-out;
+}
+
+.product-name {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-description {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.hor-col {
+  display: flex;
+  flex-direction: row;
+}
+/* END PRODUCTS BANNER */
+
+/* ANIMATION */
+
+@keyframes move-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* END ANIMATION */
+
+/* BANNER PREFOOTER */
+.product-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: #F5DEB3;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-image-block img {
+  margin-right: 30px;
+}
+/* END BANNER PREFOOTER */
+
+/* FOOTER */
+.foot {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.foot a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  font-size: 16px;
+}
+/* END FOOTER */
